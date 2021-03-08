@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  font-size: larger;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 40px;
+  padding: 10px;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.search {
+  text-align: right;
+  padding-top: 60px;
+  padding-right: 9%;
+}
+
+.additional_data {
+  padding: 10px;
+}
+
+.card-body:hover {
+  font-weight: bolder;
+  background-color: hotpink;
+}
+.col {
+  text-align: center;
+  padding: 10px 0 0 0;
+}

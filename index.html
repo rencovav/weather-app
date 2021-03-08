@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/017782d2e2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search">
+        <form>
+          <input
+            type="search"
+            placeholder="Type a city..."
+            id="search-engine"
+          />
+          <input type="submit" value="Search" id="submit-button" />
+          <input type="button" value="Current Location" id="location-button" />
+        </form>
+      </div>
+      <h1>Leipzig, Germany</h1>
+      <p id="current-day-time"></p>
+      <h2>
+        <span class="temperature" id="temperature">50</span
+        ><span class="units">
+          <a href="#" id="celsius-link" is-active="true">°C</a> |
+          <a href="#" id="fahrenheit-link">°F</a>
+        </span>
+      </h2>
+      <h3 class="description">Foggy, Raining</h3>
+      <div class="additional_data">
+        <div class="row align-items-center">
+          <div class="col-4"></div>
+          <div class="col">
+            <div id="feels-like">Feels like 13°</div>
+          </div>
+          <div class="col">
+            <div id="wind-speed">Wind 15 km/h</div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-4"></div>
+          <div class="col">
+            <div id="visibility">Visibility 2 km</div>
+          </div>
+          <div class="col">
+            <div id="humidity">Humidity 50 %</div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-1"></div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Today</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <i class="fas fa-cloud-sun"></i>
+              </h6>
+              <p class="card-text">15° / 10°</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Wed 3</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <i class="fas fa-cloud-sun"></i>
+              </h6>
+              <p class="card-text">15° / 7°</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Thu 4</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <i class="fas fa-cloud-sun"></i>
+              </h6>
+              <p class="card-text">18° / 7°</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Fri 5</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <i class="fas fa-cloud-sun"></i>
+              </h6>
+              <p class="card-text">20° / 10°</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sat 6</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <i class="fas fa-cloud-sun"></i>
+              </h6>
+              <p class="card-text">20° / 10°</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
