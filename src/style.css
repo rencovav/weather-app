@@ -16,6 +16,11 @@ h2 {
   text-transform: capitalize;
 }
 
+.footer {
+  font-family: monospace;
+  padding: 20px;
+}
+
 .search {
   text-align: right;
   padding-top: 60px;
