@@ -56,7 +56,9 @@ function displayForecast(responseForecast) {
             <div class="card-body">
               <h5 class="card-title">${day}</h5>
               <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fas fa-cloud-sun"></i>
+                <img src="http://openweathermap.org/img/wn/${
+                  responseForecast.data.daily[i].weather[0].icon
+                }@2x.png"/>
               </h6>
               <p class="card-text">
                 ${Math.round(responseForecast.data.daily[i].temp.day)}°C /
