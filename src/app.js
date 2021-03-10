@@ -119,6 +119,8 @@ function formatDate(date) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 
   let attributeCelsius = celsiusLink.getAttribute("is-active");
 
@@ -134,6 +136,8 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 
   let attributeCelsius = celsiusLink.getAttribute("is-active");
 

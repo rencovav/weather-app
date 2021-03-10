@@ -1,5 +1,6 @@
 body {
   text-align: center;
+
 }
 
 h1 {
@@ -38,4 +39,15 @@ h2 {
 .col {
   text-align: center;
   padding: 10px 0 0 0;
+}
+
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.units {
+  position: relative;
+  font-size: 20px;
+  top: -20px;
 }
