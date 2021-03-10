@@ -32,106 +32,51 @@
           <input type="button" value="Current Location" id="location-button" />
         </form>
       </div>
-      <h1>Leipzig, Germany</h1>
+      <h1>Weather App</h1>
       <p id="current-day-time"></p>
       <h2>
-        <span class="temperature" id="temperature">50</span
+        <span class="temperature" id="temperature">🌞</span
         ><span class="units">
           <a href="#" id="celsius-link" is-active="true">°C</a> |
           <a href="#" id="fahrenheit-link">°F</a>
         </span>
       </h2>
-      <h3 class="description">Foggy, Raining</h3>
+      <h3 class="description"></h3>
       <div class="additional_data">
         <div class="row align-items-center">
           <div class="col-4"></div>
           <div class="col">
-            <div id="feels-like">Feels like 13°</div>
+            <div id="feels-like"></div>
           </div>
           <div class="col">
-            <div id="wind-speed">Wind 15 km/h</div>
+            <div id="wind-speed"></div>
           </div>
           <div class="col-4"></div>
         </div>
         <div class="row align-items-center">
           <div class="col-4"></div>
           <div class="col">
-            <div id="visibility">Visibility 2 km</div>
+            <div id="visibility"></div>
           </div>
           <div class="col">
-            <div id="humidity">Humidity 50 %</div>
+            <div id="humidity"></div>
           </div>
           <div class="col-4"></div>
         </div>
       </div>
-      <div class="row align-items-center">
-        <div class="col-1"></div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Today</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fas fa-cloud-sun"></i>
-              </h6>
-              <p class="card-text">15° / 10°</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Wed 3</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fas fa-cloud-sun"></i>
-              </h6>
-              <p class="card-text">15° / 7°</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Thu 4</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fas fa-cloud-sun"></i>
-              </h6>
-              <p class="card-text">18° / 7°</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Fri 5</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fas fa-cloud-sun"></i>
-              </h6>
-              <p class="card-text">20° / 10°</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sat 6</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fas fa-cloud-sun"></i>
-              </h6>
-              <p class="card-text">20° / 10°</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-1"></div>
-      </div>
+
+      <div id="forecast" class="row align-items-center"></div>
+
       <p></p>
       <p class="footer">
-        Coded by Vlasta Řenčová, 2021 <br />
+        Coded by Vlasta Řenčová using HTML, CSS and JavaScript <br />
         See the code on
         <a href="https://github.com/rencovav/weather-app" target="_blank"
           >GitHub</a
         >
       </p>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>
