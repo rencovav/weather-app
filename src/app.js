@@ -77,9 +77,7 @@ async function showPosition() {
     let apiKey = "f752986610da7fc7c155ccdd450923d4";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${String(
       city.value
-    )
-      .trim()
-      }&appid=${apiKey}&units=metric`;
+    ).trim()}&appid=${apiKey}&units=metric`;
 
     try {
       let response = await axios.get(`${apiUrl}`);
@@ -137,17 +135,23 @@ function convertToFahrenheit(event) {
   if (attributeCelsius === "true") {
     let temperatureElement = document.querySelector("#temperature");
     let temperature = temperatureElement.innerHTML;
-    temperature = Number(temperature);
-    temperatureElement.innerHTML = Math.round(temperature * 1.8 + 32);
-    celsiusLink.setAttribute("is-active", "false");
+
+    if (temperatureElement.textContent === "🌞") {
+      temperature.innerHTML = "🌞";
+    } else {
+      temperature = Number(temperature);
+      temperatureElement.innerHTML = Math.round(temperature * 1.8 + 32);
+
+      celsiusLink.setAttribute("is-active", "false");
+    }
   }
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 
   let attributeCelsius = celsiusLink.getAttribute("is-active");
 

@@ -1,12 +1,12 @@
 body {
   text-align: center;
-  background-color: #dcedc8;
+  background-color: white;
 }
 
 h1 {
-  font-size: larger;
+  font-size: 50px;
   padding: 10px;
-  color: #689F38;
+  color: #ec6e4c;
   text-shadow: #212121;
 }
 
@@ -36,7 +36,7 @@ h2 {
 
 .card-body:hover {
   font-weight: bolder;
-  background-color: #8bc34a;
+  background-color: #ec6f4c67;
 }
 .col {
   text-align: center;
@@ -55,5 +55,5 @@ h2 {
 .units {
   position: relative;
   font-size: 20px;
-  top: -10px;
+  top: -15px;
 }
