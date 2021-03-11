@@ -1,6 +1,5 @@
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = `${temperature}`;
   let heading = document.querySelector("h1");
@@ -70,15 +69,24 @@ function displayForecast(responseForecast) {
   }
 }
 
-function showPosition() {
+async function showPosition() {
   let city = document.querySelector("#search-engine");
   if (city.value === "") {
     alert("Type something first");
   } else {
     let apiKey = "f752986610da7fc7c155ccdd450923d4";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${String(
+      city.value
+    )
+      .trim()
+      }&appid=${apiKey}&units=metric`;
 
-    axios.get(`${apiUrl}`).then(showTemperature);
+    try {
+      let response = await axios.get(`${apiUrl}`);
+      showTemperature(response);
+    } catch (err) {
+      alert("City not found. Check the spelling or type another city.");
+    }
   }
 }
 
