@@ -1,10 +1,13 @@
 body {
   text-align: center;
+  background-color: #dcedc8;
 }
 
 h1 {
   font-size: larger;
   padding: 10px;
+  color: #689F38;
+  text-shadow: #212121;
 }
 
 h2 {
@@ -33,7 +36,7 @@ h2 {
 
 .card-body:hover {
   font-weight: bolder;
-  background-color: hotpink;
+  background-color: #8bc34a;
 }
 .col {
   text-align: center;
@@ -41,12 +44,12 @@ h2 {
 }
 
 .active {
-  color: rgb(33, 33, 33);
+  color: #212121;
   cursor: default;
 }
 
 .active:hover {
-  color: rgb(33, 33, 33);
+  color: #212121;
 }
 
 .units {
