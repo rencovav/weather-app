@@ -1,6 +1,5 @@
 body {
   text-align: center;
-
 }
 
 h1 {
@@ -46,8 +45,12 @@ h2 {
   cursor: default;
 }
 
+.active:hover {
+  color: rgb(33, 33, 33);
+}
+
 .units {
   position: relative;
   font-size: 20px;
-  top: -20px;
+  top: -10px;
 }

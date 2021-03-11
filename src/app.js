@@ -34,7 +34,6 @@ function showTemperature(response) {
   axios.get(`${apiUrlForecast}`).then(displayForecast);
 }
 function displayForecast(responseForecast) {
-  console.log(responseForecast);
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
@@ -73,10 +72,14 @@ function displayForecast(responseForecast) {
 
 function showPosition() {
   let city = document.querySelector("#search-engine");
+  if (city.value === "") {
+    alert("Type something first");
+  } else {
+    let apiKey = "f752986610da7fc7c155ccdd450923d4";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
 
-  let apiKey = "f752986610da7fc7c155ccdd450923d4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
-  axios.get(`${apiUrl}`).then(showTemperature);
+    axios.get(`${apiUrl}`).then(showTemperature);
+  }
 }
 
 function searchForACity(event) {
@@ -85,14 +88,13 @@ function searchForACity(event) {
   let h1 = document.querySelector("h1");
   let searchedCity = document.querySelector("#search-engine");
 
-  if (searchedCity !== undefined) {
-    showPosition(searchedCity);
-  } else {
-    alert("Type something first");
-  }
+  showPosition(searchedCity);
 }
 
-function formatDate(date) {
+function formatDate(data) {
+  let date = now.getDate();
+  let month = now.getMonth();
+  let year = now.getFullYear();
   let days = [
     "Sunday",
     "Monday",
@@ -113,7 +115,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${date}. ${month}. ${year}, ${day} ${hours}:${minutes}`;
 }
 
 function convertToFahrenheit(event) {
@@ -166,7 +168,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 function retrievePosition(position) {
-  console.log(position);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "f752986610da7fc7c155ccdd450923d4";
