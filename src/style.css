@@ -1,3 +1,10 @@
+a {
+  color: #f0a500;
+}
+
+a:hover {
+  color: #ec6e4c;
+}
 body {
   text-align: center;
   background-color: white;
@@ -27,13 +34,16 @@ h2 {
 .search {
   text-align: right;
   padding-top: 60px;
-  padding-right: 9%;
+  padding-right: 12px;
 }
 
 .additional_data {
   padding: 10px;
 }
 
+.card-body {
+  transition: 150ms ease-in-out;
+}
 .card-body:hover {
   font-weight: bolder;
   background-color: #ec6f4c67;
