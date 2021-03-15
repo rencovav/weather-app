@@ -5,6 +5,7 @@ a {
 a:hover {
   color: #ec6e4c;
 }
+
 body {
   text-align: center;
   background-color: white;
@@ -22,6 +23,33 @@ h2 {
   padding: 10px;
 }
 
+.active {
+  color: #212121;
+  cursor: default;
+}
+
+.active:hover {
+  color: #212121;
+}
+
+.additional_data {
+  padding: 10px;
+}
+
+.card-body {
+  transition: 150ms ease-in-out;
+}
+
+.card-body:hover {
+  font-weight: bolder;
+  background-color: #ec6f4c67;
+}
+
+.col {
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
 .description {
   text-transform: capitalize;
 }
@@ -35,31 +63,6 @@ h2 {
   text-align: right;
   padding-top: 60px;
   padding-right: 12px;
-}
-
-.additional_data {
-  padding: 10px;
-}
-
-.card-body {
-  transition: 150ms ease-in-out;
-}
-.card-body:hover {
-  font-weight: bolder;
-  background-color: #ec6f4c67;
-}
-.col {
-  text-align: center;
-  padding: 10px 0 0 0;
-}
-
-.active {
-  color: #212121;
-  cursor: default;
-}
-
-.active:hover {
-  color: #212121;
 }
 
 .units {
